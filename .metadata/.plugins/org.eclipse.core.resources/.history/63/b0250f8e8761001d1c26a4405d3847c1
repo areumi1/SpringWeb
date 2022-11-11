@@ -1,0 +1,14 @@
+package sampleRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class SmapleRepository {
+
+	@Autowired
+	public String sample() {
+		System.out.println("연결");
+		return "home";
+	}
+}

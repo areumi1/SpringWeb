@@ -1,0 +1,23 @@
+package myclass.controller;
+
+import org.springframework.context.annotation.Conditional;
+
+@Conditional
+public class ReviewComtroller {
+	
+	public void test() {
+		// 1. ModelAndView 뷰페이지 지정
+		
+	}
+	
+	public void test2() {
+		// 2. 문자열 리턴 뷰페이지 지정
+		
+	}
+	
+	public void test3() {
+		// 3. void 리턴 뷰페이지 지정
+		
+	}
+
+}

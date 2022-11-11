@@ -1,0 +1,17 @@
+package sample.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import sampleService.SampleService;
+
+@Controller
+public class SampleController {
+	SampleService sampleService;
+	
+	@RequestMapping("sample.do")
+	public String sample() {
+		System.out.println("연결");
+		return "home";
+	}
+}

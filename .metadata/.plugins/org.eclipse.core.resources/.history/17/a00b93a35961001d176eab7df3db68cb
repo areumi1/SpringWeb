@@ -1,0 +1,22 @@
+package myclass.controller;
+
+
+public class ReviewComtroller {
+	
+	public void test() {
+		// 1. ModelAndView 뷰페이지 지정
+		
+	}
+	
+	public String test2() {
+		// 2. 문자열 리턴 뷰페이지 지정
+		System.out.println("String 방식");
+		return "void";
+	}
+	
+	public void test3() {
+		// 3. void 리턴 뷰페이지 지정
+		
+	}
+
+}

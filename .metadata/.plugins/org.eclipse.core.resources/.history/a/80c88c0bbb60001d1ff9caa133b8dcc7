@@ -1,0 +1,29 @@
+package myclass.controller;
+
+/*
+ *	뷰페이징 방식
+ *
+ * 1. ModelAndView에 지정
+ * 		( setViewName() 이용 )
+ * 
+ * 2. String 리턴
+ * 		( 
+ */
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+	@Controller
+	@RequestMapping("re")
+	public class requestMappingController {
+	//@RequestMapping(value={"re/a.do","re/b.do"})
+	@RequestMapping(value={"/a.do","/b.do"})
+	public String test() {
+		System.out.println("a.do 와 b.do 요청");
+		return "";
+	}
+	
+
+	
+}
+ 

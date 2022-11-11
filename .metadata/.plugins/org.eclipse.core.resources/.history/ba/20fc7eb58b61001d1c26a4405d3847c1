@@ -1,0 +1,8 @@
+package sampleRepository;
+
+@Data
+public class SampleDAO {
+	
+	private Date mm;
+
+}

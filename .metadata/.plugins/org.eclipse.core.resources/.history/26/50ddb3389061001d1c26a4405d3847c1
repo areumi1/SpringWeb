@@ -1,0 +1,19 @@
+package sampleService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import sampleRepository.SmapleRepository;
+
+@Service
+public class SampleService {
+
+	@Autowired
+	SmapleRepository sampleRepository;
+	
+	sampleRepository.smapel
+	
+	public void sample() {
+		
+	}
+}

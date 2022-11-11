@@ -1,0 +1,8 @@
+package sampleRepository;
+
+public class SmapleRepository {
+
+	public void sample() {
+		mm.sample
+	}
+}

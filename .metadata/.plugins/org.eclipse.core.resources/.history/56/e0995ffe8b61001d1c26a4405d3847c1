@@ -1,0 +1,10 @@
+package sampleRepository;
+
+
+public class SampleDAO {
+	
+	private String mm;
+	public Strinf sample;
+	
+
+}
