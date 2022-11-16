@@ -1,0 +1,111 @@
+
+$(function(){
+	
+	// '댓글추가' 버튼이 눌렸을때
+	$("#reqlyConfirm").click(function(){
+		// 사용자 입력값 받아오기
+		/*var param = { bno : $("#bno").val(), replyer : $("#replyer").val(), reply : $("#reply").val() };*/
+		
+		var param = $('#replyFrm').serialize();
+
+		//console.log(param);
+		
+		$.ajax({
+			type : 'post',
+			url	 : '../replies/new',
+			data : param,
+			success : function(result){
+				//alert(result);
+				$('#reply').val('');
+				replyList(); // 입력후 기존에있는내용에다가 방금 입력한 내용까지 추가되야하기 때문에
+			},
+			error : function(err){
+				alert('error');
+				console.log(err);
+			}
+		});
+	
+	});// end of click
+	
+	
+	replyList();
+	function replyList(){
+	
+		$.ajax({
+			type : 'get',
+			url  : '../replies',
+			//data : 보내는 데이터 없음 
+			dataType : 'json',	// 라이브러리 필요
+			success : function(result){
+				//alert(result);
+				console.log(result);
+				
+				let replyTbl = $("#replyList")
+				replyTbl.empty(); // 테이블 테크 안에있는 값들이 모두 지움
+				for(row of result)
+				{
+					//console.log(row);
+					var tr = $('<tr/>');
+					tr.append($('<td/>').html(row['rno']));
+					// <tr><td>1<td/><tr/>
+					tr.append($('<td/>').html(row['replyer']));
+					tr.append($('<td/>').html(row['reply']));
+					tr.append($('<td/>').html(row['replydate']));
+					
+					tr.append('<td><button class="delete">삭제</button></td>');
+					tr.append('<td><button class="modify">수정</button></td>');
+					
+					replyTbl.append(tr);
+				}
+			},
+			error : function(err){
+				alert('error');
+				console.log(err);
+			}
+		});
+	
+	}// end of replyList
+	
+	
+	// 삭제 버튼을 입력 했을경우
+	//**************** 동적으로 생성된 버튼은 일반적인 이벤트 발생이 안됨
+	//					--> on()
+//	$('.delete').click(function(){
+//		alert('ok');
+//	}); 안됨
+	
+//	$('.delete').on("click",function(){
+//		alert('ok');
+//	})  안됨
+	
+	$('#replyList').on('click','.delete',function(){
+			var btn = $(this);
+			
+			var rno = $(this).parents('tr').children().eq(0).text();
+			//alert(rno);
+			
+			$.ajax({
+				type : 'delete',
+				url  : '../replies/' + rno,
+				//data
+				success : function(result){
+					replyList();
+				},
+				error : function(err){
+				alert('error');
+				console.log(err);
+			}
+			
+			});
+			
+	});// end of delete
+	
+	// 수정
+	$('#replyList').on('click','.delete',function(){
+	
+	
+	
+	
+
+
+});

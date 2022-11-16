@@ -37,13 +37,24 @@
 		WHERE SEQ = #{seq}
 	</select>
 	
-	<select id="getBoardList" resultType="board"  >
+	<select id="getBoardList" parameterType="hashmap" resultType="board"  >
 			
 			SELECT *
 			FROM BOARD
+			
+			<where>
+			<if test="searchCondition != null">
+			${searchCondition} like '%${searchKeyword}%'
+			</if>
+			</where>
 			ORDER BY SEQ DESC
 		
 	</select> 
+	
+	<!--  
+		#{} : PreparedStatement( 문자열에 자동으로 '' )
+		${} : Statement (문자열에 자동으로 ''가 붙지 않음 )
+	 -->
 	
 	
 	<!-- 검색 추가  -->

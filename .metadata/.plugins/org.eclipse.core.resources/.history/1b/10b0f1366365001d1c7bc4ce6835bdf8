@@ -1,0 +1,46 @@
+package com.javassem.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.javassem.dao.ReplyDAO;
+import com.javassem.domain.ReplyVO;
+
+@Service
+public class ReplyServiceImpl implements ReplyService{
+	
+	@Autowired
+	private ReplyDAO replyDAO;
+	
+	public int insertReply(ReplyVO vo) {
+		System.out.println("확인");
+		return replyDAO.insertReply(vo);
+	}
+
+	@Override
+	public void updateReplyVO(ReplyVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteReplyVO(ReplyVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ReplyVO getBoard(ReplyVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ReplyVO> selectAllReply(ReplyVO vo) {
+		List list =  replyDAO.selectAllReply(vo);
+		return replyDAO.selectAllReply(vo);
+	}
+
+}

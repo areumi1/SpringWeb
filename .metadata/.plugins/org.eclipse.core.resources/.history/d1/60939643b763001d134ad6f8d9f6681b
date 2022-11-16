@@ -1,0 +1,18 @@
+package sample.Service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import sample.domain.EmpVO;
+
+@Service
+public class EmpServiceImpl implements EmpService{
+
+	@Override
+	public List<EmpVO> empSelect() {
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.javassem.controller;
+
+import org.junit.Test;
+
+public class BoardControllerTest {
+	
+	@Test
+	public void test() {
+		System.out.println("테스트확인");
+	}
+
+}

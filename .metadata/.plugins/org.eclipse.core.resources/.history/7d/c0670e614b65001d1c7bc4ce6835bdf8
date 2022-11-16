@@ -1,0 +1,14 @@
+package com.javassem.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+//@ControllerAdvice + @ResponseBody 같은 역확
+@RestController
+public class SampleController {
+
+	@GetMapping(value="getText", produces="text/plain;charset=utf-8")
+	public String getText() {
+		return "컨트롤러에서 보냄";
+	}
+}

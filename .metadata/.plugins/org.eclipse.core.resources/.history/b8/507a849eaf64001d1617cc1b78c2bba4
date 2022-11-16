@@ -1,0 +1,13 @@
+package com.javassem.exeception;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+@ControllerAdvice("com.javassem")
+public class ExeceptionHandler {
+
+	public String handleExeception(Exception e) {
+		
+		
+		return "error/TransErrorPage";
+	}
+}

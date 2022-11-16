@@ -1,0 +1,15 @@
+package sample.Service;
+
+import java.util.List;
+
+import sample.domain.EmpVO;
+
+public class EmpServiceImpl implements EmpService{
+
+	@Override
+	public List<EmpVO> empSelect() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

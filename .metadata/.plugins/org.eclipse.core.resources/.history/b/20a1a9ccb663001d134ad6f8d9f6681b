@@ -1,0 +1,11 @@
+package sample.Service;
+
+import java.util.List;
+
+public interface EmpService {
+	
+	List<EmpVO> empSelect(){
+		
+	}
+
+}

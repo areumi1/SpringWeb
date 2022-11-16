@@ -1,0 +1,21 @@
+package com.javassem.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.javassem.domain.ReplyVO;
+import com.javassem.service.ReplyService;
+
+@RestController // ajax 사용을위한 컨트롤러
+public class ReplyController {
+	
+	private ReplyService replyService;
+	
+	@PostMapping("replies/new")
+	public Integer insert(ReplyVO vo) {
+		System.out.println("입력요청" + vo);
+		int result = replyService.insertReply(vo);
+		if(result ==1) return "success";
+		else return "fail";	
+	}
+}

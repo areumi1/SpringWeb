@@ -1,0 +1,32 @@
+package sample.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import sample.Service.EmpService;
+import sample.domain.EmpVO;
+
+@Controller
+public class EmpController {
+	
+	@Autowired
+	private EmpService empService;
+	
+	@RequestMapping("empSelect.do")
+	public void empSelect() {
+		List<EmpVO> list = empService.empSelect();
+		
+	}
+
+}
+
+/*
+ *  뷰페이지지정 방식
+ *  1. ModelAndView 리턴
+ *  2. String 리턴
+ *  3. void 인 경우 자동으로 요청명과 동일 페이지
+ * 
+ * */

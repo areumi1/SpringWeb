@@ -1,0 +1,12 @@
+package com.javassem.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController // ajax 사용을위한 컨트롤러
+public class ReplyController {
+	
+	
+	public void insert() {
+		
+	}
+}

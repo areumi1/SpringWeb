@@ -1,0 +1,12 @@
+
+11월 15, 2022 15:04:24.357 NEW SESSION
+11월 15, 2022 15:04:24.357 [15808:22444:1115/150424.355:ERROR:device_event_log_impl.cc(215)] [15:04:24.355] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+11월 15, 2022 15:08:36.161 [13200:9012:1115/150836.161:ERROR:device_event_log_impl.cc(215)] [15:08:36.160] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+11월 15, 2022 15:10:29.312 [14736:30404:1115/151029.311:ERROR:device_event_log_impl.cc(215)] [15:10:29.311] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+11월 15, 2022 15:11:27.223 [14736:29916:1115/151127.222:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+
+11월 16, 2022 13:05:27.387 NEW SESSION
+11월 16, 2022 13:05:27.387 [10692:23548:1116/130527.372:ERROR:device_event_log_impl.cc(215)] [13:05:27.372] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+11월 16, 2022 13:06:24.407 [10692:24204:1116/130624.407:ERROR:util.cc(129)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+11월 16, 2022 15:26:44.621 [10692:23548:1116/152644.621:ERROR:gcm_message_cryptographer.cc(376)] Unable to transform the record.
+11월 16, 2022 16:44:38.692 [10692:23548:1116/164438.689:ERROR:device_event_log_impl.cc(215)] [16:44:38.688] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)

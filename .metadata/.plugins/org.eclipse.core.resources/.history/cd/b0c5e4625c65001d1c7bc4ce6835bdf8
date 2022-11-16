@@ -1,0 +1,20 @@
+package com.javassem.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.javassem.dao.ReplyDAO;
+import com.javassem.domain.BoardVO;
+
+@Service
+public class ReplyServiceImpl {
+	
+	@Autowired
+	private ReplyDAO replyDAO;
+	
+	public void insertReply(BoardVO boardVO, ReplyVO vo) {
+		System.out.println("확인");
+		replyDAO.insertReply(vo);
+	}
+
+}
